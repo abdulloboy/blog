@@ -12,7 +12,11 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 
 Route::get('migrate', function () {
-    $exitCode = Artisan::call('migrate:fresh --force');
+    $exitCode = Artisan::call('migrate:fresh --force --seed');
+});
+
+Route::get('storage_link', function () {
+    $exitCode = Artisan::call('storage:link');
 });
 
 Route::get('/', [PostController::class,'index'])->name('home');

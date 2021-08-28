@@ -36,10 +36,6 @@ class DatabaseSeeder extends Seeder
             'slug' => 'work'
         ]);
 
-        Comment::factory(10)->create([
-            'user_id' => $user->id,
-        ]);
-
         $post = Post::factory()->create([
             'user_id' => $user->id,
             'category_id' => $personal,
