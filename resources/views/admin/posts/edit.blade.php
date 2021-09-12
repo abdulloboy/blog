@@ -8,7 +8,7 @@
             <x-form.input name="slug" :value="old('slug',$post->slug)" />
             <div class="flex mt-6">
                 <div class="flex-1">
-                    <x-form.input name="thumbnail" type="file" :value="old('thumbnail',$post->thumbnail)" />
+                    <x-form.input name="thumbnail" type="file" required="false" :value="old('thumbnail',$post->thumbnail)" />
                 </div>
                 <img src="/storage/{{ $post->thumbnail }}" alt="" class="rounded-xl ml-6" width=100>
             </div>

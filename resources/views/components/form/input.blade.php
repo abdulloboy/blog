@@ -1,4 +1,5 @@
-@props(['name'])
+@props(['name',
+    'required' => 'required'])
 
 <x-form.field>
     <x-form.label name="{{ $name }}" />
@@ -6,7 +7,7 @@
     <input class="border border-gray-200 p-2 w-full"
         name="{{ $name }}"
         id="{{ $name }}"
-        required
+        {{ $required }}
         {{ $attributes(['value' => old($name), ]) }}
     >
 
